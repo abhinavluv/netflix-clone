@@ -62,4 +62,5 @@
 .signin__link:hover {
     cursor: pointer;
     text-decoration: underline;
+    margin-bottom: 30px;
 }
