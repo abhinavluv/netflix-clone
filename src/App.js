@@ -5,6 +5,7 @@ import './App.css';
 
 import HomeScreen from './components/HomeScreen/HomeScreen.component';
 import Login from './components/Login/Login.component';
+import Profile from './components/Profile/Profile.component';
 import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 
@@ -19,13 +20,13 @@ function App() {
                 dispatch(login({ uid: userAuth.uid, email: userAuth.email }));
             } else {
                 // LoggedOut
-                dispatch(logout);
+                dispatch(logout());
             }
         });
 
         // Clean-up
         return unsubscribe;
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className='App'>
