@@ -1,3 +1,7 @@
 .App {
     background: #111;
 }
+
+::selection {
+    background-color: #e50914;
+}
